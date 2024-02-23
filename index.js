@@ -18,9 +18,10 @@ function searchInText(text, searchPhrase)
     var matches = [...text.matchAll(regex)];
     if (matches.length > 0) {
         console.log("'" + searchPhrase + "' found " + matches.length + " times");
-        matches.forEach(match => {
+        for(match of matches)
+        {
             console.log("Found at index " + match.index);
-        });
+        };
     } else {
         console.log("'" + searchPhrase + "' not found");
     }
